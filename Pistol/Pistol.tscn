@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://u3mw8iyfgqhq"]
+
+[ext_resource type="PackedScene" uid="uid://f8v4nht3y2tp" path="res://Pistol/Pistol.glb" id="1_g5wr5"]
+[ext_resource type="Script" path="res://Pistol/Pistol.gd" id="1_meufa"]
+[ext_resource type="PackedScene" uid="uid://rs2np88a6erp" path="res://Pistol/Ammo.tscn" id="2_egp2c"]
+
+[node name="Pistol" type="Node3D"]
+script = ExtResource("1_meufa")
+ammo_scene = ExtResource("2_egp2c")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Pistol" parent="Pivot" instance=ExtResource("1_g5wr5")]
+
+[node name="ShotPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.293276, -2.03945)
+gizmo_extents = 0.0

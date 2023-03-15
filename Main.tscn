@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dut8ph12pf7kt"]
+
+[ext_resource type="PackedScene" uid="uid://h4q8cl4gi3fv" path="res://Player.tscn" id="2_wxccd"]
+[ext_resource type="Script" path="res://Player.gd" id="3_7tqav"]
+[ext_resource type="PackedScene" uid="uid://des7ys8gumywh" path="res://Stages/Stage1.tscn" id="3_lwlhd"]
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("2_wxccd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.73036, 0)
+collision_mask = 15
+script = ExtResource("3_7tqav")
+can_run_on_wall = true
+
+[node name="Stage" parent="." instance=ExtResource("3_lwlhd")]

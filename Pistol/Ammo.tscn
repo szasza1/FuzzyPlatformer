@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://rs2np88a6erp"]
+
+[ext_resource type="Script" path="res://Pistol/Ammo.gd" id="1_1cr2c"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ss1n1"]
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_psxvt"]
+albedo_color = Color(0.00392157, 0.00392157, 0.00392157, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ewdy7"]
+radius = 0.12523
+
+[node name="Ammo" type="RigidBody3D"]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_1cr2c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_ss1n1")
+surface_material_override/0 = SubResource("StandardMaterial3D_psxvt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ewdy7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

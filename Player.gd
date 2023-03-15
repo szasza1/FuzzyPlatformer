@@ -1,0 +1,73 @@
+extends CharacterBody3D
+
+
+@export var speed:int = 10
+@export var speed_on_wall:int = 20
+@export var jump_impulse:int = 10
+@export var fall_acceleration:int = 30
+@export var fall_acceleration_on_wall:int = 15
+@export var can_run_on_wall:bool = false
+
+@onready var main_skeleton := $MainSkeleton
+@onready var neck := $MainSkeleton/Neck
+@onready var pistol := $MainSkeleton/Neck/Hand/Pistol
+
+
+func _unhandled_input(event):
+	if event is InputEventMouseButton:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	elif event.is_action_pressed("ui_cancel"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		if event is InputEventMouseMotion:
+			main_skeleton.rotate_y(-event.relative.x * 0.01)
+			neck.rotate_x(-event.relative.y * 0.01)
+			neck.rotation.x = clamp(neck.rotation.x, deg_to_rad(-30), deg_to_rad(45))
+
+
+func _physics_process(delta):
+	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var direction:Vector3 = (main_skeleton.transform.basis * Vector3(input_dir.x , 0, input_dir.y)).normalized()
+		
+	if _wall_running(delta, direction):
+		move_and_slide()
+		return
+	
+	if not is_on_floor():
+		velocity.y -= fall_acceleration * delta
+		
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = jump_impulse
+	
+	_move(direction, speed)
+	
+	move_and_slide()
+	
+	if Input.is_action_just_pressed("shot"):
+		pistol.action()
+
+
+# This function returns true, if wall running action is happend.
+func _wall_running(delta:float, direction:Vector3) -> bool:
+	# If the player can't run on the wall. He's just falling down.
+	if not can_run_on_wall and is_on_wall_only():
+		velocity.y -= fall_acceleration * delta
+		return true
+	
+	# If the player is on the wall and he's able to run on it.
+	if can_run_on_wall and is_on_wall_only():
+		velocity.y -= fall_acceleration_on_wall * delta
+		_move(direction, speed_on_wall)
+		return true
+		
+	return false
+
+
+# Move the player, based on the direction.
+func _move(direction:Vector3, move_speed:int) -> void:
+	if direction:
+		velocity.x = direction.x * move_speed
+		velocity.z = direction.z * move_speed
+	else:
+		velocity.x = move_toward(velocity.x, 0, move_speed)
+		velocity.z = move_toward(velocity.z, 0, move_speed)
