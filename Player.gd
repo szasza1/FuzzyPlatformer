@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@onready var player_globals = get_node("/root/Globals")
 
 @export var speed:int = 10
 @export var speed_on_wall:int = 20
@@ -7,8 +8,6 @@ extends CharacterBody3D
 @export var fall_acceleration:int = 30
 @export var fall_acceleration_on_wall:int = 15
 @export var can_run_on_wall:bool = false
-
-@export var health:float = 10
 
 @onready var main_skeleton := $MainSkeleton
 @onready var neck := $MainSkeleton/Neck
@@ -47,10 +46,8 @@ func _unhandled_input(event):
 	
 	if event.is_action_pressed("scroll_up"):
 		inventory.next()
-		inventory.info()
 	elif event.is_action_pressed("scroll_down"):
 		inventory.prev()
-		inventory.info()
 
 
 func _physics_process(delta):

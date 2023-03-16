@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dut8ph12pf7kt"]
+[gd_scene load_steps=6 format=3 uid="uid://gffmo576p1hq"]
 
 [ext_resource type="PackedScene" uid="uid://h4q8cl4gi3fv" path="res://Player.tscn" id="2_wxccd"]
 [ext_resource type="Script" path="res://Player.gd" id="3_7tqav"]
 [ext_resource type="PackedScene" uid="uid://des7ys8gumywh" path="res://Stages/Stage1.tscn" id="3_lwlhd"]
+[ext_resource type="Script" path="res://UserInterface/Health_label.gd" id="4_tvk8u"]
+
+[sub_resource type="Theme" id="Theme_u3gph"]
+default_font_size = 26
 
 [node name="Main" type="Node"]
 
@@ -14,3 +18,19 @@ can_run_on_wall = true
 
 [node name="Stage" parent="." instance=ExtResource("3_lwlhd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0479469, -0.0251865, -5.46607)
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 10.0
+offset_right = 151.0
+offset_bottom = 50.0
+theme = SubResource("Theme_u3gph")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+script = ExtResource("4_tvk8u")
