@@ -16,11 +16,21 @@ extends CharacterBody3D
 
 var Pistol = load("res://Pistol/Pistol.tscn")
 var pistol:Node3D = Pistol.instantiate()
+
+var Apple = load("res://Usable/Apple.tscn")
+var apple:Node3D = Apple.instantiate()
+var apple2:Node3D = Apple.instantiate()
+var apple3:Node3D = Apple.instantiate()
+var apple4:Node3D = Apple.instantiate()
+
 var inventory:Inventory
 
 func _ready():
 	inventory = Inventory.new(hand)
 	inventory.add_item(pistol)
+	inventory.add_item(apple)
+	inventory.add_item(apple2)
+	inventory.add_item(apple3)
 	
 
 func _unhandled_input(event):
@@ -33,6 +43,7 @@ func _unhandled_input(event):
 			main_skeleton.rotate_y(-event.relative.x * 0.01)
 			neck.rotate_x(-event.relative.y * 0.01)
 			neck.rotation.x = clamp(neck.rotation.x, deg_to_rad(-30), deg_to_rad(45))
+	
 	
 	if event.is_action_pressed("scroll_up"):
 		inventory.next()

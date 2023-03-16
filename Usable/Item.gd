@@ -1,5 +1,10 @@
 class_name  Item
-extends RigidBody3D
+extends Node3D
+
 
 func action():
 	pass
+
+	
+func once_usable() -> bool:
+	return true
