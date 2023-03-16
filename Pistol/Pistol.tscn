@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://rs2np88a6erp" path="res://Pistol/Ammo.tscn" id="2_egp2c"]
 
 [node name="Pistol" type="Node3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 script = ExtResource("1_meufa")
 ammo_scene = ExtResource("2_egp2c")
 

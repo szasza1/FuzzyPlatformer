@@ -8,10 +8,20 @@ extends CharacterBody3D
 @export var fall_acceleration_on_wall:int = 15
 @export var can_run_on_wall:bool = false
 
+@export var health:float = 10
+
 @onready var main_skeleton := $MainSkeleton
 @onready var neck := $MainSkeleton/Neck
-@onready var pistol := $MainSkeleton/Neck/Hand/Pistol
+@onready var hand := $MainSkeleton/Neck/Hand
 
+var Pistol = load("res://Pistol/Pistol.tscn")
+var pistol:Node3D = Pistol.instantiate()
+var inventory:Inventory
+
+func _ready():
+	inventory = Inventory.new(hand)
+	inventory.add_item(pistol)
+	
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -23,6 +33,13 @@ func _unhandled_input(event):
 			main_skeleton.rotate_y(-event.relative.x * 0.01)
 			neck.rotate_x(-event.relative.y * 0.01)
 			neck.rotation.x = clamp(neck.rotation.x, deg_to_rad(-30), deg_to_rad(45))
+	
+	if event.is_action_pressed("scroll_up"):
+		inventory.next()
+		inventory.info()
+	elif event.is_action_pressed("scroll_down"):
+		inventory.prev()
+		inventory.info()
 
 
 func _physics_process(delta):
@@ -43,9 +60,9 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("shot"):
-		pistol.action()
-
+	if Input.is_action_just_pressed("item_action"):
+		inventory.use_item()
+	
 
 # This function returns true, if wall running action is happend.
 func _wall_running(delta:float, direction:Vector3) -> bool:

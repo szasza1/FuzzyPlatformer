@@ -13,3 +13,4 @@ script = ExtResource("3_7tqav")
 can_run_on_wall = true
 
 [node name="Stage" parent="." instance=ExtResource("3_lwlhd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0479469, -0.0251865, -5.46607)

@@ -1,3 +1,4 @@
+class_name Pistol
 extends Node3D
 
 @export var ammo_scene:PackedScene

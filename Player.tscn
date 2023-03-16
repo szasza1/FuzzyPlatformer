@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://h4q8cl4gi3fv"]
-
-[ext_resource type="PackedScene" uid="uid://u3mw8iyfgqhq" path="res://Pistol/Pistol.tscn" id="1_whl5h"]
+[gd_scene load_steps=3 format=3 uid="uid://h4q8cl4gi3fv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xy8pt"]
 
@@ -24,7 +22,4 @@ mesh = SubResource("CapsuleMesh_sai7b")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206022, 0.697313, 0)
 
 [node name="Hand" type="Marker3D" parent="MainSkeleton/Neck"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.253181, 0.0952109, -0.491462)
-
-[node name="Pistol" parent="MainSkeleton/Neck/Hand" instance=ExtResource("1_whl5h")]
-transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, 0.326511, 0.119606, -0.40788)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.624163, 0.0952109, -1.02575)

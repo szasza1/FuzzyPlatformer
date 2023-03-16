@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://des7ys8gumywh"]
+[gd_scene load_steps=4 format=3 uid="uid://des7ys8gumywh"]
 
+[ext_resource type="PackedScene" uid="uid://q1kfobl5vvct" path="res://Usable/Apple.tscn" id="1_3x5m3"]
 [ext_resource type="PackedScene" path="res://Floor.tscn" id="1_k8ao4"]
 [ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://Wall.tscn" id="2_225vr"]
 
 [node name="Stage1" type="Node3D"]
+
+[node name="Apple" parent="." instance=ExtResource("1_3x5m3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.986282, 0)
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0.433716, -0.401789, 0.806509, -0.248784, 0.806885, 0.535765, 0, 44.4062, 0)
@@ -15,7 +19,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.525, 7.17873, 3.3091)
 
 [node name="Wall2" parent="." instance=ExtResource("2_225vr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6967, 6.65508, -33.6335)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6967, 6.14613, -33.6335)
 
 [node name="Wall3" parent="." instance=ExtResource("2_225vr")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -9.38028, -1.00139, -45.4017)
