@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://des7ys8gumywh"]
+[gd_scene load_steps=4 format=3 uid="uid://des7ys8gumywh"]
 
 [ext_resource type="PackedScene" path="res://Floor.tscn" id="1_k8ao4"]
 [ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://Wall.tscn" id="2_225vr"]
+[ext_resource type="PackedScene" uid="uid://cipluy14f6whf" path="res://Mobs/Mob1.tscn" id="3_4ij83"]
 
 [node name="Stage1" type="Node3D"]
 
@@ -22,3 +23,6 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -9.380
 
 [node name="Ground2" parent="." instance=ExtResource("1_k8ao4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0383492, -1.91944, -87.4811)
+
+[node name="Mob1" parent="." instance=ExtResource("3_4ij83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47105, 10.3999)

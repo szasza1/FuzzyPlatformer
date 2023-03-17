@@ -1,8 +1,7 @@
 extends Node
 
-@onready var health_label = get_node("/root/Main/UserInterface/Label")
-
 # Global variables for the player.
+# Health
 signal health_changed
 signal player_die
 
@@ -19,3 +18,13 @@ func heal(i:float) -> void:
 func damage(i:float) -> void:
 	health -= i
 	health_changed.emit()
+
+
+# Score
+var score:int = 0
+signal score_increased
+
+func add_score(sc:int) -> void:
+	score += sc
+	score_increased.emit()
+	

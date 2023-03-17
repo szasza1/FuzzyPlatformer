@@ -15,3 +15,7 @@ func initialize(forward_vector:Vector3, spawn_pos:Vector3) -> void:
 
 func _on_timer_timeout():
 	queue_free()
+
+func delete() -> void:
+	hide()
+	queue_free()
