@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://gffmo576p1hq"]
+[gd_scene load_steps=8 format=3 uid="uid://gffmo576p1hq"]
 
 [ext_resource type="PackedScene" uid="uid://h4q8cl4gi3fv" path="res://Player.tscn" id="2_wxccd"]
 [ext_resource type="Script" path="res://Player.gd" id="3_7tqav"]
 [ext_resource type="PackedScene" uid="uid://des7ys8gumywh" path="res://Stages/Stage1.tscn" id="3_lwlhd"]
 [ext_resource type="Script" path="res://UserInterface/Health_label.gd" id="4_tvk8u"]
 [ext_resource type="Script" path="res://UserInterface/Score.gd" id="5_fsfwr"]
+[ext_resource type="Script" path="res://UserInterface/Timer.gd" id="6_wwtn0"]
 
 [sub_resource type="Theme" id="Theme_u3gph"]
 default_font_size = 26
@@ -45,3 +46,15 @@ offset_bottom = 88.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 26
 script = ExtResource("5_fsfwr")
+
+[node name="Timer" type="Label" parent="UserInterface"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 119.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_wwtn0")

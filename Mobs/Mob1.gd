@@ -7,7 +7,7 @@ extends CharacterBody3D
 @export var damage:float = 1
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	for index in range(get_slide_collision_count()):
 		var collision = get_slide_collision(index)
 		
