@@ -3,15 +3,19 @@ extends CharacterBody3D
 @onready var player_globals = get_node("/root/Globals")
 
 @export var speed:int = 10
+@export var sprint_speed:int = 15
 @export var speed_on_wall:int = 20
 @export var jump_impulse:int = 10
 @export var fall_acceleration:int = 30
 @export var fall_acceleration_on_wall:int = 15
 @export var can_run_on_wall:bool = false
+@export var can_dubble_jump:bool = true
 
 @onready var main_skeleton := $MainSkeleton
 @onready var neck := $MainSkeleton/Neck
 @onready var hand := $MainSkeleton/Neck/Hand
+
+var first_jump:bool = false
 
 var Pistol = load("res://Pistol/Pistol.tscn")
 var pistol:Node3D = Pistol.instantiate()
@@ -62,9 +66,18 @@ func _physics_process(delta):
 		velocity.y -= fall_acceleration * delta
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = jump_impulse
+		velocity.y += jump_impulse
+		first_jump = true
 	
-	_move(direction, speed)
+	if Input.is_action_just_pressed("jump") and not is_on_floor() and can_dubble_jump and first_jump:
+		velocity.y += jump_impulse
+		first_jump = false
+		
+	
+	if Input.is_action_pressed("sprint"):
+		_move(direction, sprint_speed)
+	else:
+		_move(direction, speed)
 	
 	move_and_slide()
 	
