@@ -84,6 +84,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("item_action"):
 		inventory.use_item()
 	
+	# Basic "end game" functionality for the first milestone.
+	# TODO: rework
+	if get_global_position()[1] < -5:
+		get_tree().reload_current_scene()
 
 # This function returns true, if wall running action is happend.
 func _wall_running(delta:float, direction:Vector3) -> bool:
@@ -109,3 +113,5 @@ func _move(direction:Vector3, move_speed:int) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, move_speed)
 		velocity.z = move_toward(velocity.z, 0, move_speed)
+		
+

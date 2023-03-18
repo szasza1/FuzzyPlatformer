@@ -1,16 +1,15 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://bthyp20f7jmk7"]
 
-[ext_resource type="Texture2D" uid="uid://lb20l67ybmdl" path="res://Textures/floor.jpg" id="1_un2n5"]
+[ext_resource type="Texture2D" uid="uid://mkidfylyx0ba" path="res://Textures/ground.jpg" id="1_knvyl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wtqai"]
-size = Vector3(60, 2, 60)
+size = Vector3(30, 2, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4vryx"]
-size = Vector3(60, 2, 60)
+size = Vector3(30, 2, 30)
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ug48g"]
-albedo_color = Color(1, 0.996078, 0.352941, 1)
-albedo_texture = ExtResource("1_un2n5")
+albedo_texture = ExtResource("1_knvyl")
 
 [node name="Ground" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)

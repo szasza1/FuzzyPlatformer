@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://des7ys8gumywh"]
+[gd_scene load_steps=4 format=3 uid="uid://ddnnsty0vxexf"]
 
-[ext_resource type="PackedScene" path="res://Floor.tscn" id="1_k8ao4"]
+[ext_resource type="PackedScene" uid="uid://bthyp20f7jmk7" path="res://Ground.tscn" id="1_k8ao4"]
 [ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://Wall.tscn" id="2_225vr"]
 [ext_resource type="PackedScene" uid="uid://cipluy14f6whf" path="res://Mobs/Mob1.tscn" id="3_4ij83"]
 
@@ -13,16 +13,34 @@ shadow_enabled = true
 [node name="Ground" parent="." instance=ExtResource("1_k8ao4")]
 
 [node name="Wall" parent="." instance=ExtResource("2_225vr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.525, 7.17873, 3.3091)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0837, 7.17873, 3.3091)
 
 [node name="Wall2" parent="." instance=ExtResource("2_225vr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6967, 6.14613, -33.6335)
 
 [node name="Wall3" parent="." instance=ExtResource("2_225vr")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -9.38028, -1.00139, -45.4017)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -9.42155, -1.24226, -29.2864)
 
 [node name="Ground2" parent="." instance=ExtResource("1_k8ao4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0383492, -1.91944, -87.4811)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0383492, -1.91944, -58.3297)
 
 [node name="Mob1" parent="." instance=ExtResource("3_4ij83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47105, 10.3999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47105, -11.6287)
+
+[node name="Ground3" parent="." instance=ExtResource("1_k8ao4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0766984, 7.93046, -136.727)
+
+[node name="Wall4" parent="." instance=ExtResource("2_225vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2669, 14.3575, 1.39566)
+
+[node name="Wall5" parent="." instance=ExtResource("2_225vr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8786, 16.4997, -108.96)
+
+[node name="Wall6" parent="." instance=ExtResource("2_225vr")]
+transform = Transform3D(-3.09086e-08, -1, 3.09086e-08, 0.830625, -4.28844e-08, -0.556832, 0.556832, 8.46256e-09, 0.830625, -8.17929, 6.34155, -88.5628)
+
+[node name="Mob2" parent="." instance=ExtResource("3_4ij83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.88956, 10.2897, -141.778)
+
+[node name="Mob3" parent="." instance=ExtResource("3_4ij83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.243377, 10.1309, -141.705)
