@@ -81,6 +81,7 @@ sprint={
 3d_physics/layer_4="ammo"
 3d_physics/layer_5="mob"
 3d_physics/layer_6="item"
+3d_physics/layer_7="mobView"
 
 [physics]
 

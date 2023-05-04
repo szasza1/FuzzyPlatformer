@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://l1cykvtju6cg"]
+[gd_scene load_steps=10 format=3 uid="uid://l1cykvtju6cg"]
 
 [ext_resource type="PackedScene" uid="uid://h4q8cl4gi3fv" path="res://Player.tscn" id="2_wxccd"]
 [ext_resource type="Script" path="res://Player.gd" id="3_7tqav"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://UserInterface/Score.gd" id="5_fsfwr"]
 [ext_resource type="Script" path="res://UserInterface/Timer.gd" id="6_wwtn0"]
 [ext_resource type="PackedScene" uid="uid://wvw63mal1s2e" path="res://Sky.tscn" id="7_c5l5t"]
+[ext_resource type="PackedScene" uid="uid://bmmwj3al5kx1m" path="res://Mobs/BasicEnemy.tscn" id="8_qi5ug"]
 
 [sub_resource type="Theme" id="Theme_u3gph"]
 default_font_size = 26
@@ -61,3 +62,6 @@ vertical_alignment = 1
 script = ExtResource("6_wwtn0")
 
 [node name="Sky" parent="." instance=ExtResource("7_c5l5t")]
+
+[node name="BasicEnemy" parent="." instance=ExtResource("8_qi5ug")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.26577, 0.0108466, -7.17603)

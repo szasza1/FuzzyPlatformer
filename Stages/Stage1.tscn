@@ -25,7 +25,7 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -9.421
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0383492, -1.91944, -58.3297)
 
 [node name="Mob1" parent="." instance=ExtResource("3_4ij83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47105, -11.6287)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8182, 1.21844, -11.6287)
 
 [node name="Ground3" parent="." instance=ExtResource("1_k8ao4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0766984, 7.93046, -136.727)
