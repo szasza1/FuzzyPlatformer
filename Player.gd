@@ -17,8 +17,11 @@ extends CharacterBody3D
 
 var first_jump:bool = false
 
-var Pistol = load("res://Pistol/Pistol.tscn")
+var Pistol = load("res://Weapon/Pistol.tscn")
 var pistol:Node3D = Pistol.instantiate()
+
+var M16 = load("res://Weapon/M16.tscn")
+var m16:Node3D = M16.instantiate()
 
 var Apple = load("res://Usable/Apple.tscn")
 var apple:Node3D = Apple.instantiate()
@@ -31,7 +34,7 @@ var inventory:Inventory
 func _ready():
 	inventory = Inventory.new(hand)
 	inventory.add_item(pistol)
-	inventory.add_item(apple)
+	inventory.add_item(m16)
 	inventory.add_item(apple2)
 	inventory.add_item(apple3)
 	

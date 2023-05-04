@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://rs2np88a6erp"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://Pistol/Ammo.gd" id="1_1cr2c"]
+[ext_resource type="Script" path="res://Weapon/Ammo.gd" id="1_1cr2c"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_ss1n1"]
 radius = 0.05

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg2e7f3u7vs6b"]
+
+[ext_resource type="Script" path="res://Weapon/M16.gd" id="1_nqpaj"]
+[ext_resource type="PackedScene" uid="uid://bkwfsuotribdi" path="res://Weapon/M16.glb" id="1_tcc2j"]
+[ext_resource type="PackedScene" path="res://Weapon/Ammo.tscn" id="2_5rhic"]
+
+[node name="M16" type="Node3D"]
+script = ExtResource("1_nqpaj")
+ammo_scene = ExtResource("2_5rhic")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="M16" parent="Pivot" instance=ExtResource("1_tcc2j")]
+transform = Transform3D(0.638, 0, 0, 0, 0.638, 0, 0, 0, 0.638, 0.13, 0, -0.156)
+
+[node name="ShotPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136375, 0.00566292, -1.80994)
+gizmo_extents = 0.0
