@@ -57,7 +57,7 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction:Vector3 = (main_skeleton.transform.basis * Vector3(input_dir.x , 0, input_dir.y)).normalized()
-	print(input_dir)
+
 	if _wall_running(delta, direction):
 		move_and_slide()
 		return
