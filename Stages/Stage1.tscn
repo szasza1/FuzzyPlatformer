@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddnnsty0vxexf"]
+[gd_scene load_steps=8 format=3]
 
-[ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://Wall.tscn" id="2_225vr"]
+[ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://WorldModels/Wall.tscn" id="2_225vr"]
 [ext_resource type="PackedScene" uid="uid://dgi1a2au2pkfh" path="res://Mobs/BasicRobot.tscn" id="4_3v0fp"]
 [ext_resource type="PackedScene" uid="uid://by3jwv7yxqbf6" path="res://WorldModels/Island2.tscn" id="4_05lqy"]
 [ext_resource type="PackedScene" uid="uid://d3kraro8fuinm" path="res://WorldModels/House.tscn" id="4_khbf7"]
-[ext_resource type="PackedScene" uid="uid://h4q8cl4gi3fv" path="res://Player.tscn" id="5_f13ae"]
-[ext_resource type="PackedScene" uid="uid://wvw63mal1s2e" path="res://Sky.tscn" id="6_2mmq3"]
+[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="5_f13ae"]
+[ext_resource type="PackedScene" uid="uid://wvw63mal1s2e" path="res://WorldModels/Sky.tscn" id="6_2mmq3"]
 [ext_resource type="PackedScene" uid="uid://xvaq3hqmtma3" path="res://UI/InfoUI.tscn" id="7_s8oy8"]
 
 [node name="Stage1" type="Node3D"]
