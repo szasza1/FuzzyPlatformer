@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://xvaq3hqmtma3"]
+
+[ext_resource type="Script" path="res://UI/Health.gd" id="1_jv5gm"]
+[ext_resource type="FontFile" uid="uid://bikdl16s7p7hk" path="res://Utils/cnr.otf" id="1_uw0r8"]
+[ext_resource type="Script" path="res://UI/Score.gd" id="2_1b58d"]
+[ext_resource type="Script" path="res://UI/Timer.gd" id="3_plk0u"]
+
+[sub_resource type="SystemFont" id="SystemFont_4p5aj"]
+font_weight = 450
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_fycg2"]
+default_font = SubResource("SystemFont_4p5aj")
+default_font_size = 26
+
+[node name="UserInterface" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Health" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 10.0
+offset_right = 151.0
+offset_bottom = 50.0
+theme = SubResource("Theme_fycg2")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_uw0r8")
+script = ExtResource("1_jv5gm")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 49.0
+offset_right = 140.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_uw0r8")
+theme_override_font_sizes/font_size = 26
+script = ExtResource("2_1b58d")
+
+[node name="Timer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 119.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_uw0r8")
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_plk0u")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsrrrewij2crf"]
+
+[ext_resource type="PackedScene" uid="uid://bqctfw02qv2l2" path="res://World/Large Rock.glb" id="1_cpogv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wy4p6"]
+size = Vector3(0.628016, 0.516429, 0.635157)
+
+[node name="Rock" type="StaticBody3D"]
+transform = Transform3D(4.637, 0, 0, 0, 4.637, 0, 0, 0, 4.637, 0, 0, 0)
+
+[node name="Large Rock" parent="." instance=ExtResource("1_cpogv")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00939462, 0.239268, 0.00309324)
+shape = SubResource("BoxShape3D_wy4p6")

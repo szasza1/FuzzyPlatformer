@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://h4q8cl4gi3fv"]
+[gd_scene load_steps=4 format=3 uid="uid://h4q8cl4gi3fv"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_2uxjd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xy8pt"]
 
@@ -7,6 +9,8 @@
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 collision_layer = 2
 collision_mask = 13
+script = ExtResource("1_2uxjd")
+can_run_on_wall = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_xy8pt")

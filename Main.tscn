@@ -1,72 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8hvqhih4gr1o"]
+[gd_scene load_steps=2 format=3 uid="uid://qr78v4dj6h4x"]
 
-[ext_resource type="PackedScene" uid="uid://h4q8cl4gi3fv" path="res://Player.tscn" id="2_wxccd"]
-[ext_resource type="Script" path="res://Player.gd" id="3_7tqav"]
-[ext_resource type="PackedScene" uid="uid://ddnnsty0vxexf" path="res://Stages/Stage1.tscn" id="3_lwlhd"]
-[ext_resource type="Script" path="res://UserInterface/Health_label.gd" id="4_tvk8u"]
-[ext_resource type="Script" path="res://UserInterface/Score.gd" id="5_fsfwr"]
-[ext_resource type="Script" path="res://UserInterface/Timer.gd" id="6_wwtn0"]
-[ext_resource type="PackedScene" uid="uid://wvw63mal1s2e" path="res://Sky.tscn" id="7_c5l5t"]
-[ext_resource type="PackedScene" uid="uid://jedhmhfm6h3b" path="res://Mobs/FightRobot.tscn" id="8_nkklx"]
-[ext_resource type="PackedScene" uid="uid://blt4qonc5wuxm" path="res://Mobs/FastRobot.tscn" id="9_j7ip3"]
-
-[sub_resource type="Theme" id="Theme_u3gph"]
-default_font_size = 26
+[ext_resource type="PackedScene" uid="uid://c1fp5sajn27vd" path="res://UI/Menu.tscn" id="7_w6cg2"]
 
 [node name="Main" type="Node"]
 
-[node name="Player" parent="." instance=ExtResource("2_wxccd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.73036, 0)
-collision_mask = 15
-script = ExtResource("3_7tqav")
-can_run_on_wall = true
-
-[node name="Stage" parent="." instance=ExtResource("3_lwlhd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0479469, -0.0251865, -5.46607)
-
-[node name="UserInterface" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Health" type="Label" parent="UserInterface"]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 10.0
-offset_right = 151.0
-offset_bottom = 50.0
-theme = SubResource("Theme_u3gph")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-script = ExtResource("4_tvk8u")
-
-[node name="Score" type="Label" parent="UserInterface"]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 49.0
-offset_right = 140.0
-offset_bottom = 88.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-script = ExtResource("5_fsfwr")
-
-[node name="Timer" type="Label" parent="UserInterface"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 80.0
-offset_right = 119.0
-offset_bottom = 125.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("6_wwtn0")
-
-[node name="Sky" parent="." instance=ExtResource("7_c5l5t")]
-
-[node name="Robot" parent="." instance=ExtResource("8_nkklx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.5412)
-min_fight_distance = 2.0
-
-[node name="FastEnemy" parent="." instance=ExtResource("9_j7ip3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.68813, 0, -6.15156)
+[node name="Menu" parent="." instance=ExtResource("7_w6cg2")]

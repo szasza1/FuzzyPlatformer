@@ -14,5 +14,5 @@ background_mode = 2
 sky = SubResource("Sky_7i2m8")
 sky_rotation = Vector3(3.14159, 0, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment"]
+[node name="Sky" type="WorldEnvironment"]
 environment = SubResource("Environment_hikve")

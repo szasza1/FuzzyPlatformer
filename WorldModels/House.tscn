@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3kraro8fuinm"]
+
+[ext_resource type="PackedScene" uid="uid://bhdd1o6k8nudc" path="res://World/House.glb" id="1_frxpt"]
+[ext_resource type="PackedScene" uid="uid://c5vnejv2bcv0a" path="res://World/Lantern.glb" id="2_ky6ha"]
+[ext_resource type="PackedScene" uid="uid://cm03qdm73o3yk" path="res://World/Chest.glb" id="3_smlli"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4wqj6"]
+size = Vector3(0.630517, 0.0801753, 0.930347)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rowed"]
+size = Vector3(0.0510605, 0.287956, 0.224783)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n1yyu"]
+size = Vector3(0.633843, 0.271461, 0.0463074)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nltxd"]
+size = Vector3(0.0447186, 0.256357, 0.91125)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2hjq"]
+size = Vector3(0.10389, 0.0479813, 0.102577)
+
+[node name="House" type="StaticBody3D"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
+collision_mask = 0
+
+[node name="House" parent="." instance=ExtResource("1_frxpt")]
+
+[node name="Floor" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00192028, 0.0434834, 0.00247747)
+shape = SubResource("BoxShape3D_4wqj6")
+
+[node name="Wall3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.204614, 0.225339, 0.440451)
+shape = SubResource("BoxShape3D_rowed")
+
+[node name="Wall4" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.204225, 0.232893, 0.432714)
+shape = SubResource("BoxShape3D_rowed")
+
+[node name="Wall5" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21539, -0.425216)
+shape = SubResource("BoxShape3D_n1yyu")
+
+[node name="1" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, -0.290637, 0.211759, 0)
+shape = SubResource("BoxShape3D_nltxd")
+
+[node name="2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0.294482, 0.211759, 0)
+shape = SubResource("BoxShape3D_nltxd")
+
+[node name="Lantern" parent="." instance=ExtResource("2_ky6ha")]
+transform = Transform3D(0.042, 0, 0, 0, 0.042, 0, 0, 0, 0.042, 0, 0.607285, -0.0273088)
+
+[node name="Chest" parent="." instance=ExtResource("3_smlli")]
+transform = Transform3D(0.088, 0, 0, 0, 0.088, 0, 0, 0, 0.088, 0, 0.0778995, -0.193664)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.0666667, 0, 0, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.00200525, 0.570141, -0.0196157)
+light_energy = 2.323
+light_size = 0.159
+light_specular = 0.169
+omni_range = 12.5169
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, -0.00141009, 0.109069, -0.210266)
+shape = SubResource("BoxShape3D_g2hjq")

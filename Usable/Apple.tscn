@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://q1kfobl5vvct"]
 
 [ext_resource type="Script" path="res://Usable/Apple.gd" id="1_7i5qe"]
-[ext_resource type="PackedScene" uid="uid://ddc34by4uy8om" path="res://Usable/apple.glb" id="2_ps5xo"]
+[ext_resource type="PackedScene" uid="uid://sn2q70d84tea" path="res://Usable/Apple2.glb" id="2_l8jnk"]
 
 [node name="Apple" type="Node3D"]
 script = ExtResource("1_7i5qe")
 
 [node name="Pivot" type="Node3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.000902176, 0.0203038, 0.00073123)
+transform = Transform3D(0.675, 0, 0, 0, 0.675, 0, 0, 0, 0.675, -0.000902176, -0.276886, 0.00073123)
 
-[node name="apple" parent="Pivot" instance=ExtResource("2_ps5xo")]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0.00689137, -0.004893, -0.00361097)
+[node name="Apple2" parent="Pivot" instance=ExtResource("2_l8jnk")]
+transform = Transform3D(0.006, 0, 0, 0, 0.006, 0, 0, 0, 0.006, 0.001, -0.148, -0.001)
