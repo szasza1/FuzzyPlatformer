@@ -31,6 +31,7 @@ func add_score(sc:int) -> void:
 # Level Infos
 var current_level: int = 1
 var spent_time: float = 0
+var max_level:int = 3
 
 func next_level() -> void:
 	current_level += 1
@@ -38,3 +39,5 @@ func next_level() -> void:
 func spent_time_delta(time: float) -> void:
 	spent_time = time
 
+func has_next_level() ->bool:
+	return current_level <= max_level

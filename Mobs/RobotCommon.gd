@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var speed:int = 2
 @export var health:float = 5
 @export var damage:float = 1
-@export var min_fight_distance:float = 1.2
+@export var min_fight_distance:float = 1.33
 
 @onready var viewArea:Area3D = $ViewArea
 @onready var animation := $Animation
@@ -36,6 +36,7 @@ func _physics_process(delta):
 	if player_pos != Vector3.ZERO:
 		# Rotate forward the player
 		look_at(player_pos, Vector3.UP)
+
 		# If the player is close enough to fight with
 		if global_position.distance_to(player_pos) < min_fight_distance:
 			globals.damage(damage * delta)

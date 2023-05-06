@@ -53,19 +53,19 @@ transform = Transform3D(-0.257048, 0, -0.966399, 0, 1, 0, 0.966399, 0, -0.257048
 transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -30.9704, 86.655, -29.8983)
 
 [node name="Island6" parent="." instance=ExtResource("2_nyngm")]
-transform = Transform3D(0.891, 0, 0, 0, 0.891, 0, 0, 0, 0.891, -86.0977, 48.9284, -103.551)
+transform = Transform3D(0.891, 0, 0, 0, 0.891, 0, 0, 0, 0.891, -72.6437, 48.9284, -90.1287)
 
 [node name="Robot2" parent="." instance=ExtResource("8_ontcu")]
-transform = Transform3D(-0.975715, 0, -0.219046, 0, 1, 0, 0.219046, 0, -0.975715, -88.5312, 82.5141, -114.718)
+transform = Transform3D(-0.975715, 0, -0.219046, 0, 1, 0, 0.219046, 0, -0.975715, -75.0772, 82.5141, -101.295)
 
 [node name="Robot3" parent="." instance=ExtResource("8_ontcu")]
-transform = Transform3D(0.146446, 0, -0.989219, 0, 1, 0, 0.989219, 0, 0.146446, -92.1281, 82.5141, -96.2924)
+transform = Transform3D(0.146446, 0, -0.989219, 0, 1, 0, 0.989219, 0, 0.146446, -78.6741, 82.5141, -82.8701)
 
 [node name="FastEnemy2" parent="." instance=ExtResource("7_2lqs0")]
-transform = Transform3D(-0.968622, 0, 0.248538, 0, 1, 0, -0.248538, 0, -0.968622, -80.9211, 82.5141, -106.946)
+transform = Transform3D(-0.968622, 0, 0.248538, 0, 1, 0, -0.248538, 0, -0.968622, -72.4248, 82.5141, -101.881)
 
 [node name="Island9" parent="." instance=ExtResource("2_nyngm")]
-transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -54.5544, 86.5255, -66.3046)
+transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -54.5544, 86.5255, -60.9959)
 
 [node name="Wall3" parent="." instance=ExtResource("1_yoa7x")]
-transform = Transform3D(0.839686, 0, 0.543072, 0, 1, 0, -0.543072, 0, 0.839686, -60.2174, 96.4493, -85.6764)
+transform = Transform3D(0.839686, 0, 0.543072, 0, 1, 0, -0.543072, 0, 0.839686, -48.6355, 96.4493, -73.9211)

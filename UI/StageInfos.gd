@@ -12,5 +12,10 @@ func _ready():
 
 
 func _on_next_level_pressed():
-	var stage_path: String = "res://Stages/Stage%d.tscn" % globals.current_level
+	var stage_path: String = ""
+	if globals.has_next_level():
+		stage_path = "res://Stages/Stage%d.tscn" % globals.current_level
+	else:
+		stage_path = "res://UI/Menu.tscn"
+		
 	get_tree().change_scene_to_file(stage_path)

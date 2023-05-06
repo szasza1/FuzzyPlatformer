@@ -1185,7 +1185,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kwr7n"]
-size = Vector3(2.32155, 1.94374, 1.34195)
+size = Vector3(2.32155, 1.82803, 1.34195)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w4tor"]
 size = Vector3(10.3907, 0.27459, 12.9481)
@@ -1381,7 +1381,7 @@ libraries = {
 }
 
 [node name="Collision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0115451, 0.888252, 0.00584328)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0115451, 0.91922, 0.00584328)
 shape = SubResource("BoxShape3D_kwr7n")
 
 [node name="ViewArea" type="Area3D" parent="."]
