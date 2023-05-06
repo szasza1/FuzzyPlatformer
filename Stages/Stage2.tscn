@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://8jolb4wgb2b7"]
+
+[ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://WorldModels/Wall.tscn" id="1_yoa7x"]
+[ext_resource type="PackedScene" uid="uid://by3jwv7yxqbf6" path="res://WorldModels/Island2.tscn" id="2_nyngm"]
+[ext_resource type="PackedScene" uid="uid://d3kraro8fuinm" path="res://WorldModels/House.tscn" id="3_yt3c5"]
+[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="4_q0km1"]
+[ext_resource type="PackedScene" uid="uid://wvw63mal1s2e" path="res://WorldModels/Sky.tscn" id="5_kb8ax"]
+[ext_resource type="PackedScene" uid="uid://xvaq3hqmtma3" path="res://UI/InfoUI.tscn" id="6_f5tdp"]
+[ext_resource type="PackedScene" uid="uid://blt4qonc5wuxm" path="res://Mobs/FastRobot.tscn" id="7_2lqs0"]
+[ext_resource type="PackedScene" uid="uid://jedhmhfm6h3b" path="res://Mobs/FightRobot.tscn" id="8_ontcu"]
+
+[node name="Stage2" type="Node3D"]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.25, 0.433716, -0.401789, 0.806509, -0.248784, 0.806885, 0.535765, 0.0207453, 170.021, 0.0194435)
+shadow_enabled = true
+
+[node name="Wall2" parent="." instance=ExtResource("1_yoa7x")]
+transform = Transform3D(0.839686, 0, 0.543072, 0, 1, 0, -0.543072, 0, 0.839686, -12.0893, 104.335, -11.1317)
+
+[node name="Island" parent="." instance=ExtResource("2_nyngm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.64517, 57.3121, 46.7575)
+
+[node name="House" parent="." instance=ExtResource("3_yt3c5")]
+transform = Transform3D(-14.8974, 0, -1.7511, 0, 15, 0, 1.7511, 0, -14.8974, 0, 94.382, 56.6497)
+
+[node name="Island3" parent="." instance=ExtResource("2_nyngm")]
+transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -8.87915, 92.5204, 16.2425)
+
+[node name="Island4" parent="." instance=ExtResource("2_nyngm")]
+transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -8.87915, 94.0802, 4.42321)
+
+[node name="Island5" parent="." instance=ExtResource("2_nyngm")]
+transform = Transform3D(0.633, 0, 0, 0, 0.633, 0, 0, 0, 0.633, -41.4691, 67.8574, -44.4224)
+
+[node name="Player" parent="." instance=ExtResource("4_q0km1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 96.8915, 40)
+
+[node name="Sky" parent="." instance=ExtResource("5_kb8ax")]
+
+[node name="UserInterface" parent="." instance=ExtResource("6_f5tdp")]
+
+[node name="Island7" parent="." instance=ExtResource("2_nyngm")]
+transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -21.2481, 89.637, -17.5725)
+
+[node name="FastEnemy" parent="." instance=ExtResource("7_2lqs0")]
+transform = Transform3D(-0.984282, 0, 0.176604, 0, 1, 0, -0.176604, 0, -0.984282, -39.4903, 91.7178, -54.4455)
+
+[node name="Robot" parent="." instance=ExtResource("8_ontcu")]
+transform = Transform3D(-0.257048, 0, -0.966399, 0, 1, 0, 0.966399, 0, -0.257048, -51.8446, 91.7178, -44.087)
+
+[node name="Island8" parent="." instance=ExtResource("2_nyngm")]
+transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -30.9704, 86.655, -29.8983)
+
+[node name="Island6" parent="." instance=ExtResource("2_nyngm")]
+transform = Transform3D(0.891, 0, 0, 0, 0.891, 0, 0, 0, 0.891, -86.0977, 48.9284, -103.551)
+
+[node name="Robot2" parent="." instance=ExtResource("8_ontcu")]
+transform = Transform3D(-0.975715, 0, -0.219046, 0, 1, 0, 0.219046, 0, -0.975715, -88.5312, 82.5141, -114.718)
+
+[node name="Robot3" parent="." instance=ExtResource("8_ontcu")]
+transform = Transform3D(0.146446, 0, -0.989219, 0, 1, 0, 0.989219, 0, 0.146446, -92.1281, 82.5141, -96.2924)
+
+[node name="FastEnemy2" parent="." instance=ExtResource("7_2lqs0")]
+transform = Transform3D(-0.968622, 0, 0.248538, 0, 1, 0, -0.248538, 0, -0.968622, -80.9211, 82.5141, -106.946)
+
+[node name="Island9" parent="." instance=ExtResource("2_nyngm")]
+transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -54.5544, 86.5255, -66.3046)
+
+[node name="Wall3" parent="." instance=ExtResource("1_yoa7x")]
+transform = Transform3D(0.839686, 0, 0.543072, 0, 1, 0, -0.543072, 0, 0.839686, -60.2174, 96.4493, -85.6764)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://kn8j570w5qp0"]
 
 [ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://WorldModels/Wall.tscn" id="2_225vr"]
 [ext_resource type="PackedScene" uid="uid://dgi1a2au2pkfh" path="res://Mobs/BasicRobot.tscn" id="4_3v0fp"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://Player/Player.tscn" id="5_f13ae"]
 [ext_resource type="PackedScene" uid="uid://wvw63mal1s2e" path="res://WorldModels/Sky.tscn" id="6_2mmq3"]
 [ext_resource type="PackedScene" uid="uid://xvaq3hqmtma3" path="res://UI/InfoUI.tscn" id="7_s8oy8"]
+[ext_resource type="PackedScene" uid="uid://cykpaiml17du0" path="res://WorldModels/FinishFlag.tscn" id="8_v2oj5"]
 
 [node name="Stage1" type="Node3D"]
 
@@ -55,3 +56,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 40)
 [node name="Sky" parent="." instance=ExtResource("6_2mmq3")]
 
 [node name="UserInterface" parent="." instance=ExtResource("7_s8oy8")]
+
+[node name="FinishFlag" parent="." instance=ExtResource("8_v2oj5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.87744, 15.8272, -94.0461)

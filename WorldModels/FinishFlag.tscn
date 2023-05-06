@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cykpaiml17du0"]
+
+[ext_resource type="PackedScene" uid="uid://bl5ij8ifblhvr" path="res://World/Flag.glb" id="1_gs1oe"]
+[ext_resource type="Script" path="res://WorldModels/FinishFlag.gd" id="1_ua4ti"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_j3qnf"]
+height = 0.188147
+radius = 1.93456
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x0yr5"]
+height = 2.32242
+radius = 0.440043
+
+[node name="FinishFlag" type="StaticBody3D"]
+script = ExtResource("1_ua4ti")
+
+[node name="Flag" parent="." instance=ExtResource("1_gs1oe")]
+
+[node name="FinishArea" type="Area3D" parent="."]
+collision_layer = 128
+collision_mask = 2
+
+[node name="FinishCicle" type="CollisionShape3D" parent="FinishArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.218196, 0)
+shape = SubResource("CylinderShape3D_j3qnf")
+
+[node name="FlagCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014393, 1.17905, -0.013615)
+shape = SubResource("CylinderShape3D_x0yr5")
+
+[connection signal="body_entered" from="FinishArea" to="." method="_on_finish_area_body_entered"]

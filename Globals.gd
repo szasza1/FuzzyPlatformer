@@ -28,3 +28,13 @@ func add_score(sc:int) -> void:
 	score += sc
 	score_increased.emit()
 	
+# Level Infos
+var current_level: int = 1
+var spent_time: float = 0
+
+func next_level() -> void:
+	current_level += 1
+	
+func spent_time_delta(time: float) -> void:
+	spent_time = time
+

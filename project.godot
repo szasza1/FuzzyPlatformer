@@ -86,6 +86,7 @@ sprint={
 3d_physics/layer_5="mob"
 3d_physics/layer_6="item"
 3d_physics/layer_7="mobView"
+3d_physics/layer_8="detectionArea"
 
 [physics]
 
