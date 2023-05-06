@@ -4,7 +4,8 @@ extends Item
 @export var ammo_scene:PackedScene
 
 @onready var shot_point := $ShotPoint
-@onready var stage = get_node("/root/Main/Stage")
+# @onready var stage = get_node("/root/Main")
+@onready var stage = get_parent()
 
 func once_usable() -> bool:
 	return false
