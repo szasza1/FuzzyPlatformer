@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://8jolb4wgb2b7"]
+[gd_scene load_steps=10 format=3 uid="uid://qbqvr8j4jd8j"]
 
 [ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://WorldModels/Wall.tscn" id="1_yoa7x"]
-[ext_resource type="PackedScene" uid="uid://by3jwv7yxqbf6" path="res://WorldModels/Island2.tscn" id="2_nyngm"]
+[ext_resource type="PackedScene" uid="uid://by3jwv7yxqbf6" path="res://WorldModels/Island.tscn" id="2_nyngm"]
 [ext_resource type="PackedScene" uid="uid://d3kraro8fuinm" path="res://WorldModels/House.tscn" id="3_yt3c5"]
-[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="4_q0km1"]
+[ext_resource type="PackedScene" uid="uid://bx7rm0ibp4g5n" path="res://Player/Player.tscn" id="4_q0km1"]
 [ext_resource type="PackedScene" uid="uid://wvw63mal1s2e" path="res://WorldModels/Sky.tscn" id="5_kb8ax"]
 [ext_resource type="PackedScene" uid="uid://xvaq3hqmtma3" path="res://UI/InfoUI.tscn" id="6_f5tdp"]
 [ext_resource type="PackedScene" uid="uid://blt4qonc5wuxm" path="res://Mobs/FastRobot.tscn" id="7_2lqs0"]
 [ext_resource type="PackedScene" uid="uid://jedhmhfm6h3b" path="res://Mobs/FightRobot.tscn" id="8_ontcu"]
+[ext_resource type="PackedScene" uid="uid://cykpaiml17du0" path="res://WorldModels/FinishFlag.tscn" id="9_rw3gi"]
 
 [node name="Stage2" type="Node3D"]
 
@@ -48,6 +49,7 @@ transform = Transform3D(-0.984282, 0, 0.176604, 0, 1, 0, -0.176604, 0, -0.984282
 
 [node name="Robot" parent="." instance=ExtResource("8_ontcu")]
 transform = Transform3D(-0.257048, 0, -0.966399, 0, 1, 0, 0.966399, 0, -0.257048, -51.8446, 91.7178, -44.087)
+speed = 7
 
 [node name="Island8" parent="." instance=ExtResource("2_nyngm")]
 transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, -30.9704, 86.655, -29.8983)
@@ -57,9 +59,11 @@ transform = Transform3D(0.891, 0, 0, 0, 0.891, 0, 0, 0, 0.891, -72.6437, 48.9284
 
 [node name="Robot2" parent="." instance=ExtResource("8_ontcu")]
 transform = Transform3D(-0.975715, 0, -0.219046, 0, 1, 0, 0.219046, 0, -0.975715, -75.0772, 82.5141, -101.295)
+speed = 4
 
 [node name="Robot3" parent="." instance=ExtResource("8_ontcu")]
 transform = Transform3D(0.146446, 0, -0.989219, 0, 1, 0, 0.989219, 0, 0.146446, -78.6741, 82.5141, -82.8701)
+speed = 5
 
 [node name="FastEnemy2" parent="." instance=ExtResource("7_2lqs0")]
 transform = Transform3D(-0.968622, 0, 0.248538, 0, 1, 0, -0.248538, 0, -0.968622, -72.4248, 82.5141, -101.881)
@@ -69,3 +73,6 @@ transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0,
 
 [node name="Wall3" parent="." instance=ExtResource("1_yoa7x")]
 transform = Transform3D(0.839686, 0, 0.543072, 0, 1, 0, -0.543072, 0, 0.839686, -48.6355, 96.4493, -73.9211)
+
+[node name="FinishFlag" parent="." instance=ExtResource("9_rw3gi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85.4955, 82.0699, -98.0841)

@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bpbyfksq4k861"]
+[gd_scene load_steps=10 format=3 uid="uid://betjdtbagfh6i"]
 
 [ext_resource type="PackedScene" uid="uid://bymjm53h2pvty" path="res://WorldModels/Wall.tscn" id="1_6t426"]
-[ext_resource type="PackedScene" uid="uid://by3jwv7yxqbf6" path="res://WorldModels/Island2.tscn" id="2_ruhnk"]
+[ext_resource type="PackedScene" uid="uid://by3jwv7yxqbf6" path="res://WorldModels/Island.tscn" id="2_ruhnk"]
 [ext_resource type="PackedScene" uid="uid://d3kraro8fuinm" path="res://WorldModels/House.tscn" id="3_q5u2a"]
-[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="4_v3m60"]
+[ext_resource type="PackedScene" uid="uid://bx7rm0ibp4g5n" path="res://Player/Player.tscn" id="4_v3m60"]
 [ext_resource type="PackedScene" uid="uid://wvw63mal1s2e" path="res://WorldModels/Sky.tscn" id="5_loewr"]
 [ext_resource type="PackedScene" uid="uid://xvaq3hqmtma3" path="res://UI/InfoUI.tscn" id="6_u0iyn"]
 [ext_resource type="PackedScene" uid="uid://blt4qonc5wuxm" path="res://Mobs/FastRobot.tscn" id="7_gpssd"]
@@ -46,18 +46,22 @@ transform = Transform3D(-0.984282, 0, 0.176604, 0, 1, 0, -0.176604, 0, -0.984282
 
 [node name="Robot" parent="." instance=ExtResource("8_0owse")]
 transform = Transform3D(0.917345, 0, 0.398093, 0, 1, 0, -0.398093, 0, 0.917345, 27.7461, 91.7178, -11.6343)
+speed = 6
+damage = 3.0
 
 [node name="Wall3" parent="." instance=ExtResource("1_6t426")]
-transform = Transform3D(0.0368702, 0, 0.99932, 0, 1, 0, -0.99932, 0, 0.0368702, 46.9, 98.0707, -27.6575)
+transform = Transform3D(0.0368702, 0, 0.99932, 0, 1, 0, -0.99932, 0, 0.0368702, 46.9, 95.8381, -27.6575)
 
 [node name="Robot4" parent="." instance=ExtResource("8_0owse")]
 transform = Transform3D(0.294341, 0, 0.955701, 0, 1, 0, -0.955701, 0, 0.294341, 32.3572, 91.7179, -20.578)
+speed = 6
+damage = 3.0
 
 [node name="Island8" parent="." instance=ExtResource("2_ruhnk")]
 transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, 53.2541, 87.4069, -23.3103)
 
 [node name="Wall4" parent="." instance=ExtResource("1_6t426")]
-transform = Transform3D(0.0368702, 0, 0.99932, 0, 1, 0, -0.99932, 0, 0.0368702, 63.2599, 98.0707, -18.2702)
+transform = Transform3D(0.0368702, 0, 0.99932, 0, 1, 0, -0.99932, 0, 0.0368702, 63.2599, 96.6769, -18.2702)
 
 [node name="Island9" parent="." instance=ExtResource("2_ruhnk")]
 transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0, 0.111, 71.2588, 87.4069, -23.3103)
@@ -66,4 +70,4 @@ transform = Transform3D(0.110715, -0.00795167, 0, 0.00795167, 0.110715, 0, 0, 0,
 transform = Transform3D(0.633, 0, 0, 0, 0.633, 0, 0, 0, 0.633, 93.9171, 67.8574, -22.4185)
 
 [node name="FinishFlag" parent="." instance=ExtResource("9_52phs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.103, 91.7179, -21.0517)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 105.103, 91.3921, -21.0517)

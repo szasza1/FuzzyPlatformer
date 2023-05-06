@@ -32,12 +32,6 @@ theme_override_fonts/font = ExtResource("1_femvb")
 theme_override_font_sizes/font_size = 30
 text = "Start"
 
-[node name="Options" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_femvb")
-theme_override_font_sizes/font_size = 30
-text = "Options"
-
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_femvb")
@@ -45,5 +39,4 @@ theme_override_font_sizes/font_size = 30
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
