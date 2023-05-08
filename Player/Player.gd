@@ -57,7 +57,7 @@ func _unhandled_input(event):
 		inventory.prev()
 
 
-func _physics_process(delta):
+func _process(delta):
 	
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction:Vector3 = (main_skeleton.transform.basis * Vector3(input_dir.x , 0, input_dir.y)).normalized()
